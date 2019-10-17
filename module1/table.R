@@ -16,7 +16,7 @@ gdp <- as_tibble(country_values)
 colnames(gdp) <- column_names
 gdp$country <- country_list
 
-gdp %>% 
+gdp <- gdp %>% 
     dplyr::select(country, `2007`:`2018`)
 
 
