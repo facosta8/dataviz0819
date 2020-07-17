@@ -1,0 +1,20 @@
+---
+title: "Demo map"
+output: html_notebook
+---
+
+```{r, message=FALSE}
+library(tidyverse)
+library(ggmap)
+library(lubridate)
+```
+
+```{r}
+clean_date
+
+
+f <- read_csv2('../data/incidentes-viales-c5.csv')
+f$fecha_creacion <- parse_date(f$fecha_creacion, format = '%d/%m/%Y')
+f$fecha_cierre <- parse_date(f$fecha_cierre, format = '%d/%m/%Y')
+```
+
